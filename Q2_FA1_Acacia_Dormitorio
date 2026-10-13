@@ -1,0 +1,131 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPX8znuB6wCeXImTIGAEnIE",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/bbqsoce/Q2_Assesments/blob/main/Q2_FA1_Acacia_Dormitorio\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "4H7zBPXH5nZP",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "939b1908-36b3-4231-ba65-23191fc6cdf8"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "--- Modular Calculator Mini-Program ---\n",
+            "Enter first number: 12342134\n",
+            "Enter second number: 12344321\n",
+            "\n",
+            "Choose operation:\n",
+            "1 - Addition\n",
+            "2 - Subtraction\n",
+            "3 - Multiplication\n",
+            "4 - Division\n",
+            "\n",
+            "Enter choice: 2\n",
+            "\n",
+            "Result: -2187.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# ==========================================\n",
+        "# MODULE 1: Function Definitions\n",
+        "# ==========================================\n",
+        "\n",
+        "def add_numbers(num1, num2):\n",
+        "    \"\"\"Calculates and returns the sum of two numbers.\"\"\"\n",
+        "    return num1 + num2\n",
+        "\n",
+        "def subtract_numbers(num1, num2):\n",
+        "    \"\"\"Calculates and returns the difference of two numbers.\"\"\"\n",
+        "    return num1 - num2\n",
+        "\n",
+        "def multiply_numbers(num1, num2):\n",
+        "    \"\"\"Calculates and returns the product of two numbers.\"\"\"\n",
+        "    return num1 * num2\n",
+        "\n",
+        "def divide_numbers(num1, num2):\n",
+        "    \"\"\"Calculates and returns the quotient, handling division by zero.\"\"\"\n",
+        "    if num2 == 0:\n",
+        "        return \"Cannot divide by zero.\"\n",
+        "    return num1 / num2\n",
+        "\n",
+        "# ==========================================\n",
+        "# MODULE 2: Main Program Implementation\n",
+        "# ==========================================\n",
+        "\n",
+        "def run_calculator():\n",
+        "    print(\"--- Modular Calculator Mini-Program ---\")\n",
+        "\n",
+        "    # 1. Input: Ask the user to enter two numbers\n",
+        "    try:\n",
+        "        first_number = float(input(\"Enter first number: \"))\n",
+        "        second_number = float(input(\"Enter second number: \"))\n",
+        "    except ValueError:\n",
+        "        print(\"\\nError: Please enter valid numeric values.\")\n",
+        "        return\n",
+        "\n",
+        "    # 2. Input: Ask the user to choose an operation\n",
+        "    print(\"\\nChoose operation:\")\n",
+        "    print(\"1 - Addition\")\n",
+        "    print(\"2 - Subtraction\")\n",
+        "    print(\"3 - Multiplication\")\n",
+        "    print(\"4 - Division\\n\")\n",
+        "\n",
+        "    choice = input(\"Enter choice: \")\n",
+        "\n",
+        "    # Initialize the result variable\n",
+        "    result = None\n",
+        "\n",
+        "    # 3. Process: Pass parameters as arguments and call functions\n",
+        "    if choice == '1':\n",
+        "        result = add_numbers(first_number, second_number)\n",
+        "    elif choice == '2':\n",
+        "        result = subtract_numbers(first_number, second_number)\n",
+        "    elif choice == '3':\n",
+        "        result = multiply_numbers(first_number, second_number)\n",
+        "    elif choice == '4':\n",
+        "        result = divide_numbers(first_number, second_number)\n",
+        "    else:\n",
+        "        print(\"\\nInvalid choice selected.\")\n",
+        "        return\n",
+        "\n",
+        "    # 4. Output: Display the final returned value clearly\n",
+        "    print(f\"\\nResult: {result}\")\n",
+        "\n",
+        "# Execute the interactive mini-program\n",
+        "run_calculator()"
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyPX8znuB6wCeXImTIGAEnIE",
+      "authorship_tag": "ABX9TyMUJ+1U+9fBab6t9e122wvD",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -58,6 +58,7 @@
         }
       ],
       "source": [
+        "# @title\n",
         "# ==========================================\n",
         "# MODULE 1: Function Definitions\n",
         "# ==========================================\n",
@@ -124,7 +125,20 @@
         "    print(f\"\\nResult: {result}\")\n",
         "\n",
         "# Execute the interactive mini-program\n",
-        "run_calculator()"
+        "run_calculator()\n",
+        "\n",
+        "\n",
+        "\n",
+        "1. What functions did you create in your calculator program?\n",
+        "\t• add_numbers, subtract_numbers, multiply_numbers, and divide_numbers.\n",
+        "2. What parameters did your functions use?\n",
+        "\t• Each function used two parameters: num1 and num2.\n",
+        "3. What arguments were passed when the functions were called?\n",
+        "\t• The variables first_number and second_number (captured from user input) were passed down as arguments.\n",
+        "4. How did your program use the returned value?\n",
+        "\t• The returned value was caught and stored in a variable named result, which was then clearly printed out to the user interface.\n",
+        "5. Why is it better to divide the calculator program into functions instead of writing everything in one long block of code?\n",
+        "\t• Dividing the code makes it easier to read, organize, and debug. It isolates mathematical logic from user input handling and enables code reusability since functions can be called multiple times without repeating code blocks.\n"
       ]
     }
   ]
